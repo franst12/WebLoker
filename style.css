@@ -1,0 +1,571 @@
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: cursive;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  padding: 30px;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  text-wrap: wrap;
+  background: url(img/laptop.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  text-align: center;
+}
+
+.header::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 50%;
+}
+
+#home .container h1 {
+  font-family: "Pacifico", cursive;
+  font-weight: 500;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav.sticky,
+nav .container button {
+  background-color: #fff;
+}
+
+nav.sticky .container h1 {
+  color: crimson;
+}
+
+nav.sticky .container span {
+  color: #000;
+}
+
+nav .container .navbar-nav a {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+nav.sticky .container .navbar-nav a {
+  color: #000;
+}
+
+nav.sticky .container .navbar-nav a:hover {
+  color: crimson;
+}
+
+nav .container {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .container .navbar-nav a {
+  color: #fff;
+}
+nav .container .navbar-nav a:hover {
+  color: #868686;
+}
+
+.header .judul {
+  margin-top: 100px;
+  color: #fff;
+  z-index: 1;
+}
+
+.header .judul h1 {
+  color: crimson;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.header .judul span {
+  color: #fff;
+}
+
+.header .judul p {
+  font-size: 1.5rem;
+}
+
+main {
+  width: 100%;
+}
+
+main .page {
+  text-align: center;
+  max-height: 100vh;
+  width: 100%;
+  padding: 20px 0;
+}
+
+main #about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(img/office\ man.jpg);
+  background-size: cover;
+  object-fit: cover;
+  object-position: center;
+  color: #fff;
+}
+
+main #about::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  background-size: cover;
+  background-color: #000;
+  opacity: 50%;
+  z-index: 1;
+}
+
+main section h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  z-index: 2;
+  margin-block: 20px;
+}
+
+main .content-about {
+  display: flex;
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 5px;
+  margin: auto;
+  z-index: 2;
+}
+
+main .content-about .article {
+  flex: 1;
+  line-height: 2rem;
+}
+
+main .content-about .article .support-caption {
+  margin-block: 2rem;
+}
+
+main .content-about .button {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+main .content-about .button .post-job {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .content-about .button .post-job::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  width: 150px;
+  height: 300px;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  background: linear-gradient(90deg, crimson, blue, rgb(178, 0, 178));
+  transition: all 1s;
+  animation: spin 4s linear infinite;
+}
+
+main .content-about .button .post-job:hover::before {
+  background: linear-gradient(aqua, yellow);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+main .content-about .button .post-job::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  background-color: #000;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 3;
+}
+
+main .content-about .button a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  object-fit: cover;
+  object-position: center;
+  z-index: 5;
+  transition: all 0.3s;
+}
+
+main .content-about .button a:hover {
+  color: crimson;
+}
+
+main #jobs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main #jobs h1 span {
+  color: crimson;
+}
+
+main #jobs .daftar-job {
+  max-width: 900px;
+  height: 100%;
+  padding: 50px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+main .page .daftar-job li {
+  text-align: center;
+  padding: 0 0 10px 0;
+  background-color: transparent;
+  width: 230px;
+  height: 200px;
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+main #jobs .daftar-job li img {
+  position: relative;
+  width: 100%;
+  height: 130px;
+  margin-bottom: 20px;
+}
+
+main #jobs .daftar-job li span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+main #jobs .daftar-job li:hover {
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+main #jobs .daftar-job li span:hover {
+  color: crimson;
+}
+
+main #job-details {
+  padding: 30px 0;
+  background-color: aqua;
+}
+
+main #company {
+  padding: 30px;
+  background: url(img/office.jpg);
+  background-size: cover;
+  object-fit: cover;
+  object-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+  z-index: 1;
+}
+
+main #company::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  background-size: cover;
+  background-color: #000;
+  opacity: 50%;
+  z-index: 2;
+}
+
+main #company .company-intro {
+  z-index: 2;
+}
+
+main #company .des-company {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+main #company .des-company .company-values {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main #company .des-company .company-values ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main #company .des-company .company-values ul li {
+  border-radius: 10px;
+  color: #000;
+  background-color: yellow;
+}
+
+main #contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main #contact .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+main #contact span {
+  color: crimson;
+}
+
+main #contact .logContact img {
+  max-width: 600px;
+  max-height: 400px;
+}
+
+main #contact .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  cursor: pointer;
+  padding: 8px;
+  background-color: #f9f9f9;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+}
+
+li:hover {
+  background-color: #eee;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+form button,
+form input {
+  color: rgba(0, 0, 0, 0.5);
+  width: 400px;
+  padding: 8px;
+  margin-top: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+}
+
+form button {
+  background-color: #1577ff;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+form button:hover {
+  background-color: #015dde;
+  color: #afafaf;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+form button:active {
+  background-color: #3cd444;
+  color: #fff;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #868686;
+  text-align: center;
+}
+
+footer .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 10px;
+}
+
+footer .footer .icon ion-icon {
+  margin-inline: 10px;
+  font-size: 2rem;
+}
+
+footer .footer .heart {
+  font-size: 20px;
+  color: rgb(255, 5, 89);
+}
+
+footer .footer .heart:hover {
+  color: #1577ff;
+}
+
+footer .footer .icon .ig {
+  color: crimson;
+}
+footer .footer .icon .fb {
+  color: #036bfd;
+}
+footer .footer .icon .tt {
+  color: #000;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    box-sizing: border-box;
+  }
+
+  nav.sticky .container {
+    display: none;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+  }
+
+  nav .container h1 {
+    color: #000;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  main .page {
+    width: 100%;
+    height: 100%;
+  }
+
+  main .page h1 {
+    font-size: 2rem;
+  }
+
+  main .content-about {
+    width: 100%;
+    height: auto;
+    line-height: 3px;
+  }
+
+  main .content-about .support-caption {
+    line-height: 13px;
+  }
+
+  main .content-about .article {
+    font-size: 15px;
+  }
+
+  main .content-about .button .post-job {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+  main #company .des-company {
+    flex-direction: column;
+  }
+
+  main #company .company-intro,
+  main #company .company-mission,
+  main #company .company-values,
+  main #company .company-vision {
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+  main #apply .contact {
+    flex-direction: column;
+  }
+
+  main #contact .contact .logContact {
+    display: none;
+  }
+
+  main .page .daftar-job {
+    width: 95;
+  }
+
+  main .page .daftar-job li {
+    width: 150px;
+    height: 150px;
+  }
+}
